@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const todoSchema = new Schema(
     {
+        name: String,
         item: String,
-        done: Boolean,
     }
 )
 

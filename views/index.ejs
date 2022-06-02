@@ -19,9 +19,20 @@
     </header>
     <main>
         <ul>
-            <%# for( let i = 0; i < array.length; i++ ) { %>
-            
-            <%# } %>
+            <% for( let i = 0; i < item.length; i++ ) { %>
+                <li>
+                    <a href="/todo/<%= item[i]._id %> ">
+                        <%= item[i].name %>:
+                        <%= item[i].item %>
+                    </a>
+                    <form action="/todo/<%= item[i]._id %>/edit">
+                        <input type="submit" value="Edit">
+                    </form>
+                    <form action="/todo/<%= item[i]._id %>?_method=DELETE" method="post">
+                        <input type="submit" value="Done/Remove">
+                    </form>
+                </li>
+            <% } %>
         </ul>
     </main>
 </body>

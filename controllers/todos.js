@@ -13,7 +13,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     Todo.find({}, (err, items) => {
         res.render('index.ejs', {
-            items
+            item: items
         });
     });
 });
@@ -25,27 +25,46 @@ router.get('/new', (req, res) => {
 
 // DELETE
 router.delete('/:id', (req, res) => {
-    res.redirect('/');
+    Todo.findByIdAndDelete(req.params.id, (err, data) => {
+        res.redirect('/todo');
+    });
 });
 
 // UPDATE
 router.put('/:id', (req, res) => {
-    res.redirect('/:id');
+    Todo.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        (err, deleted) => {
+            res.redirect(`/todo/${req.params.id}`)
+        })
 });
 
 // CREATE
 router.post('/', (req, res) => {
-    res.redirect('/');
+    Todo.create(req.body, (err, newItem) => {
+        res.redirect('/todo');
+    })
 });
 
 // EDIT
 router.get('/:id/edit', (req, res) => {
-    res.render('edit.ejs');
+    Todo.findById(req.params.id, (err, items) => {
+        res.render('edit.ejs',
+        {
+            item: items
+        });
+    })
 });
 
 // SHOW
 router.get('/:id', (req, res) => {
-    res.render('show.ejs');
+    Todo.findById(req.params.id, (err, items) => {
+        res.render('show.ejs',
+        {
+            item: items
+        });
+    });
 });
 
 module.exports = router;
