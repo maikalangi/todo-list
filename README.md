@@ -13,8 +13,6 @@ To-do list for users to add, update, complete, and delete actions to do
 7. EXPRESS
 8. NODE JS
 
-[Link to Trello](https://trello.com/b/83ilevJG/to-do-list)
-
 ![](https://photos.google.com/photo/AF1QipNerr4QsPFKeVbypLcXLXsLHrc1-TlRJv6oVky0)
 
 ##App Deployment
@@ -25,3 +23,5 @@ To-do list for users to add, update, complete, and delete actions to do
 
 - create multiple lists
 - add page load animations and generally smooth UX/UI design
+
+[Link to Trello](https://trello.com/b/83ilevJG/to-do-list)
