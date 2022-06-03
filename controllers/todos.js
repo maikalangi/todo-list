@@ -35,7 +35,10 @@ router.put('/:id', (req, res) => {
     Todo.findByIdAndUpdate(
         req.params.id,
         req.body,
-        (err, deleted) => {
+        {
+            new: true,
+        },
+        (err, updatedItem) => {
             res.redirect(`/todo/${req.params.id}`)
         })
 });
