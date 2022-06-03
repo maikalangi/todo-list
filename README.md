@@ -4,14 +4,14 @@ To-do list for users to add, update, complete, and delete actions to do
 
 ##Technologies used
 
-1.HTML
-2.CSS
-3.JAVASCRIPT
-4.EJS
-5.MONGODB
-6.MONGOOSE
-7.EXPRESS
-8.NODE JS
+1. HTML
+2. CSS
+3. JAVASCRIPT
+4. EJS
+5. MONGODB
+6. MONGOOSE
+7. EXPRESS
+8. NODE JS
 
 [Link to Trello](https://trello.com/b/83ilevJG/to-do-list)
 
