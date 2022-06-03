@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head.ejs') %>
     <title>New To-Do</title>
 </head>
 <body>
     <h1>New To-Do</h1>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/todo">Back</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
     <main>
-        <ul>
+        <div class="lines"></div>
+        <ul class="list">
             <li>
                 <form action="/todo" method="post">
-                    <input type="text" name="name" placeholder="Item Name">
-                    <input type="text" name="item" placeholder="Item">
+                    <input type="text" name="name" placeholder="To-do">
+                    <input type="text" name="item" placeholder="Details">
                     <!-- <label for="check">Done?</label><input type="checkbox" id="check" name="done"> -->
-                    <input type="submit" value="Add">
+                    <button type="submit">
+                        <i class="bi bi-file-earmark-plus-fill"></i>
+                    </button>
                 </form>
             </li>
         </ul>
+        <a href="/todo">
+            <i class="bi-box-arrow-left" style="font-size:40px;"></i>
+        </a>
     </main>
 </body>
 </html>

@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head.ejs') %>
     <title>To-do List</title>
 </head>
 <body>
     <h1>To-Do List</h1>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/todo/new">Add new to-do item</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
     <main>
-        <ul>
+        <div class="lines"></div>
+        <ul class="list">
             <% for( let i = 0; i < item.length; i++ ) { %>
-                <li>
-                    <a href="/todo/<%= item[i]._id %> ">
-                        <%= item[i].name %>:
-                        <%= item[i].item %>
-                    </a>
+                <div>
                     <form action="/todo/<%= item[i]._id %>/edit">
-                        <input type="submit" value="Edit">
+                        <button type="submit">
+                            <i class="bi bi-pencil"></i>
+                        </button>
                     </form>
+                    <li>
+                        <a href="/todo/<%= item[i]._id %> ">
+                            <b><%= item[i].name %>:</b>
+                            <em><%= item[i].item %></em>
+                        </a>
+                    </li>
                     <form action="/todo/<%= item[i]._id %>?_method=DELETE" method="post">
-                        <input type="submit" value="Done/Remove">
+                        <button type="submit">
+                            <i class="bi bi-check-circle"></i>
+                        </button>
                     </form>
-                </li>
+                </div>
             <% } %>
         </ul>
+            <span><a href="/todo/new">
+                <i id="index-icon" class="bi bi-plus-circle" style="font-size:40px;"></i>
+            </a></span>
     </main>
 </body>
 </html>
