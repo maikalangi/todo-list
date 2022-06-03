@@ -18,11 +18,11 @@
     </header>
     <main>
         <ul>
+            <form action="/todo/<%= item._id %>?_method=PUT" method="post">
             <li><input type="text" name="name" placeholder="<%= item.name %> "></li>
-            <li><input type="text" name="name" placeholder="<%= item.item %> "></li>
-        </ul>
-        <form action="/todo/<%= item._id %>?_method=PUT" method="post">
+            <li><input type="text" name="item" placeholder="<%= item.item %> "></li>
             <input type="submit" value="Edit">
+        </ul>
         </form>
     </main>
 </body>
