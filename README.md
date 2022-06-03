@@ -2,7 +2,7 @@
 
 To-do list for users to add, update, complete, and delete actions to do
 
-##Technologies used
+## Technologies used
 
 1. HTML
 2. CSS
@@ -15,11 +15,11 @@ To-do list for users to add, update, complete, and delete actions to do
 
 ![](https://photos.google.com/photo/AF1QipNerr4QsPFKeVbypLcXLXsLHrc1-TlRJv6oVky0)
 
-##App Deployment
+## App Deployment
 
 [Link to Site](https://young-reaches-38531.herokuapp.com/todo)
 
-##Future Enhancements
+## Future Enhancements
 
 - create multiple lists
 - add page load animations and generally smooth UX/UI design
