@@ -30,6 +30,10 @@ app.use(methodOverride('_method'));
 // CONTROLLER
 app.use('/todo', controller);
 
+app.get('/',(req, res) => {
+    res.redirect('/todo');
+});
+
 // LISTENER
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, ()=>console.log(`Listening on port ${PORT}`));
