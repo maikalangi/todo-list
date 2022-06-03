@@ -13,7 +13,7 @@ To-do list for users to add, update, complete, and delete actions to do
 7. EXPRESS
 8. NODE JS
 
-![](https://photos.google.com/photo/AF1QipNerr4QsPFKeVbypLcXLXsLHrc1-TlRJv6oVky0)
+![Wireframe](https://photos.google.com/photo/AF1QipNerr4QsPFKeVbypLcXLXsLHrc1-TlRJv6oVky0)
 
 ## App Deployment
 
